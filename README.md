@@ -3,7 +3,7 @@ In this workshop you will create your first space shooter in C#. You will use an
 
 # Installation
 
-First and foremost you have to clone this repository :
+First and foremost, you have to clone this repository :
 
 ```shell
 git clone git@github.com:ArthurVasseur/CSharpIndroductionForUnity.git
@@ -38,7 +38,7 @@ sudo dnf install SFML
 
 ## Understaining OOP
 
-In Oriented Object Programming (OOP) you will creates classes for reprensting an object.
+In Oriented Object Programming (OOP) you will create classes for representing an object.
 Each object contains data and methods to manipulate and access that data.
 
 For example in C you will create a struct for representing data.
