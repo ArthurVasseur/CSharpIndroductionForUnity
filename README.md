@@ -116,7 +116,7 @@ public static void Main(string[] args)
 }
 ```
 
-**private** is an access modifier that is to say you can only access to this data / function inside a class.
+**private** is an access modifier meaning that you can only access this data/function inside a class.
 
 **public Vector2D(float x, float y)** is a constructor, it's a special function that is automaticlly called when a object is created. 
 
@@ -164,7 +164,7 @@ public class Move : Component
 
 ### Interacting with keyboard
 
-This script print in the console "Left action pressed" when "Left" action is pressed
+This script print in the console "Left action pressed" when "Q" is pressed
 
 ```csharp
 public class Move : Component
@@ -189,7 +189,7 @@ public class Move : Component
 ## Step 3 Detecting collisions
 
 When a GameObject collides with another GameObject, Unity calls OnTriggerEnter.
-You can initialize like so :
+You can initialize it like that :
 ```csharp
 {
     GameObject gameObject = new GameObject();
