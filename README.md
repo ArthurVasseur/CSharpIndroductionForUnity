@@ -1,5 +1,5 @@
 # Introduction
-In this workshop you will create your first space shooter in C#. You will use an engine who looks like Unity.
+In this workshop you will create your first space shooter in C#. You will use an engine that looks like Unity.
 
 # Installation
 
@@ -38,7 +38,7 @@ sudo dnf install SFML
 
 ## Understaining OOP
 
-In Oriented Object Programming (OOP) you will create classes for representing an object.
+In Oriented Object Programming (OOP) you will create classes to represent an object.
 Each object contains data and methods to manipulate and access that data.
 
 For example in C you will create a struct for representing data.
@@ -57,7 +57,7 @@ Vector2D vec = {10, 25};
 int x = vec.x;
 ```
 
-And for modify this data :
+And to modify this data :
 ```c
 Vector2D vec = {10, 25};
 vec.x = 12;
@@ -116,7 +116,7 @@ public static void Main(string[] args)
 }
 ```
 
-**private** is an access modifier that is to say you can only access to this data / function inside a class.
+**private** is an access modifier meaning that you can only access this data/function inside a class.
 
 **public Vector2D(float x, float y)** is a constructor, it's a special function that is automaticlly called when a object is created. 
 
@@ -129,9 +129,22 @@ public static void Main(string[] args)
 The first step of this workshop is simple, you need to create a scene.
 For this you need to create a class and [inherits from Scene class ](https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/object-oriented/inheritance), then in the constructor you can create a [gameObject](https://docs.unity3d.com/Manual/class-GameObject.html) and add it a Transform and Sprite component.
 
+To instantiate gameobject in the scene you have to create a gameobject, then add it to the scene : 
+
+```csharp
+Scene scene = new Scene();
+GameObject background = new GameObject();
+background.AddComponent(new Transform(new Vector2D(0,0),0, new Vector2D(1,1)));
+background.AddComponent(new Sprite("../../../Assets/background.png"));
+scene.AddGameObject(background);
+```
+
+Or if you are inside a custom class that inherits from `Component` class you can call `Instantiate` function.
+> You can destroy gameObject by calling `Destroy` function.
+
 > Take a look at the GameObject class.
 
-> Don't forget to instanciate your class with **new** keyword, for example : **new Sprite("texture path")**
+> Don't forget to instantiate your class with **new** keyword, for example : **new Sprite("texture path")**
 
 
 ## Step 2 moving a gameobject with your keyboard
@@ -164,7 +177,7 @@ public class Move : Component
 
 ### Interacting with keyboard
 
-This script print in the console "Left action pressed" when "Left" action is pressed
+This script print in the console "Left action pressed" when "Q" is pressed
 
 ```csharp
 public class Move : Component
@@ -189,7 +202,7 @@ public class Move : Component
 ## Step 3 Detecting collisions
 
 When a GameObject collides with another GameObject, Unity calls OnTriggerEnter.
-You can initialize like so :
+You can initialize it like that :
 ```csharp
 {
     GameObject gameObject = new GameObject();

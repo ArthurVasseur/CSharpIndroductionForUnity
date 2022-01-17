@@ -8,9 +8,10 @@ public class Collider : Component
     public bool IsTrigger = false;
     private bool _lasFrameColliding = false;
     
-    public Collider(Vector2D bounds)
+    public Collider(Vector2D bounds, bool isTrigger = false)
     {
         Bounds = bounds;
+        IsTrigger = isTrigger;
     }
 
     public bool CheckCollisionEnter(Collider other)
