@@ -35,6 +35,11 @@ sudo apt install libsfml-dev
 sudo dnf install SFML
 ```
 
+### Nuget Package
+
+```
+cd CSharpEngine/CSharpEngine && dotnet add package SFML.Net --version 2.5.0
+```
 
 ## Understaining OOP
 
